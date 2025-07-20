@@ -298,21 +298,32 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white text-gray-900"
+      className="relative bg-white text-gray-900 pt-16"
     >
-      <div className="container mx-auto px-4 pt-20 pb-8 md:pt-24 md:pb-16">
+      <div className="container mx-auto px-4 pt-8 pb-8 md:pt-12 md:pb-16">
         {/* Imagem no topo */}
-        <div className="w-full max-w-3xl mx-auto mb-4 md:mb-6">
+        <div className="w-full max-w-3xl mx-auto mb-2 md:mb-4 relative">
           <img
             src="https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-19_10-29-51.jpg"
             alt="Federal Associados - Conectividade sem limites"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto"
             loading="eager"
           />
+          
+          {/* Símbolo 4G posicionado ao lado do braço esquerdo da mulher */}
+          <div className="absolute" style={{ 
+            left: '15%', 
+            top: '45%', 
+            transform: 'translate(-50%, -50%)'
+          }}>
+            <div className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold shadow-lg animate-pulse">
+              4G
+            </div>
+          </div>
         </div>
         
-        {/* Título abaixo da imagem */}
-        <div className="text-center mb-6 md:mb-8">
+        {/* Título movido para cima */}
+        <div className="text-center mb-4 md:mb-6">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
             Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
@@ -321,7 +332,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="w-full">
             {/* VÍDEO MOBILE - SEMPRE CLICÁVEL */}
-            <div className="md:hidden mb-6 relative">
+            <div className="md:hidden mb-4 relative">
               {showVideo && !videoError && (
                 <div className="relative p-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-2xl shadow-2xl" style={{ maxWidth: '800px', margin: '10px auto' }}>
                   <video 
@@ -413,12 +424,12 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             </div>
 
             {/* SUBTÍTULO ABAIXO DO VÍDEO */}
-            <p className="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed text-center md:text-left">
+            <p className="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed text-center md:text-left">
               {typedText}
             </p>
             
             {/* BOTÃO ABAIXO DO SUBTÍTULO */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-0 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center md:justify-start">
               <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-xl py-4 px-8">
                 Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
@@ -428,7 +439,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* COLUNA DIREITA - DESKTOP ONLY */}
           <div className="relative hidden md:block">
             {/* VÍDEO - DESKTOP COM REF SEPARADA */}
-            <div className="mb-6 relative">
+            <div className="mb-4 relative">
               {showVideo && !videoError && (
                 <div className="relative p-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-2xl shadow-2xl">
                   <video 
