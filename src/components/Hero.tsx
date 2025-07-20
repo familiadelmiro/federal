@@ -300,9 +300,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
       ref={sectionRef}
       className="relative bg-white text-gray-900 pt-16"
     >
-      <div className="container mx-auto px-4 pt-8 pb-8 md:pt-12 md:pb-16">
+      <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
         {/* Imagem no topo */}
-        <div className="w-full max-w-3xl mx-auto mb-2 md:mb-4 relative">
+        <div className="w-full max-w-3xl mx-auto mb-1 md:mb-2 relative">
           <img
             src="https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-19_10-29-51.jpg"
             alt="Federal Associados - Conectividade sem limites"
@@ -310,54 +310,12 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             loading="eager"
           />
           
-          {/* Símbolo 4G posicionado ao lado do braço esquerdo da mulher */}
-          {/* Símbolo 4G em 3D - igual ao 5G da imagem */}
-          <div className="absolute" style={{ 
-            right: '25%', 
-            top: '35%', 
-            transform: 'translate(50%, -50%)'
-          }}>
-            <div className="relative">
-              {/* Texto 4G em 3D com efeito de profundidade */}
-              <div 
-                className="text-6xl font-black text-green-500 select-none"
-                style={{
-                  fontFamily: 'Arial Black, sans-serif',
-                  textShadow: `
-                    2px 2px 0px #2d5016,
-                    4px 4px 0px #1a2f0a,
-                    6px 6px 0px #0f1a05,
-                    8px 8px 15px rgba(0,0,0,0.3)
-                  `,
-                  transform: 'perspective(500px) rotateX(15deg) rotateY(-10deg)',
-                  filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.2))'
-                }}
-              >
-                4G
-              </div>
-              
-              {/* Brilho/highlight no topo */}
-              <div 
-                className="absolute top-0 left-0 text-6xl font-black text-green-300 opacity-60 select-none pointer-events-none"
-                style={{
-                  fontFamily: 'Arial Black, sans-serif',
-                  transform: 'perspective(500px) rotateX(15deg) rotateY(-10deg) translate(-1px, -1px)',
-                  background: 'linear-gradient(135deg, rgba(255,255,255,0.8) 0%, transparent 50%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
-                }}
-              >
-                4G
-              </div>
-            </div>
-          </div>
         </div>
         
-        {/* Título movido para cima */}
-        <div className="text-center mb-4 md:mb-6">
+        {/* Título */}
+        <div className="text-center mb-2 md:mb-3">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
-            Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
+            Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
         </div>
 
