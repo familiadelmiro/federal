@@ -311,13 +311,45 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           />
           
           {/* Símbolo 4G posicionado ao lado do braço esquerdo da mulher */}
+          {/* Símbolo 4G em 3D - igual ao 5G da imagem */}
           <div className="absolute" style={{ 
-            left: '15%', 
-            top: '45%', 
-            transform: 'translate(-50%, -50%)'
+            right: '25%', 
+            top: '35%', 
+            transform: 'translate(50%, -50%)'
           }}>
-            <div className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold shadow-lg animate-pulse">
-              4G
+            <div className="relative">
+              {/* Texto 4G em 3D com efeito de profundidade */}
+              <div 
+                className="text-6xl font-black text-green-500 select-none"
+                style={{
+                  fontFamily: 'Arial Black, sans-serif',
+                  textShadow: `
+                    2px 2px 0px #2d5016,
+                    4px 4px 0px #1a2f0a,
+                    6px 6px 0px #0f1a05,
+                    8px 8px 15px rgba(0,0,0,0.3)
+                  `,
+                  transform: 'perspective(500px) rotateX(15deg) rotateY(-10deg)',
+                  filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.2))'
+                }}
+              >
+                4G
+              </div>
+              
+              {/* Brilho/highlight no topo */}
+              <div 
+                className="absolute top-0 left-0 text-6xl font-black text-green-300 opacity-60 select-none pointer-events-none"
+                style={{
+                  fontFamily: 'Arial Black, sans-serif',
+                  transform: 'perspective(500px) rotateX(15deg) rotateY(-10deg) translate(-1px, -1px)',
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.8) 0%, transparent 50%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                4G
+              </div>
             </div>
           </div>
         </div>
