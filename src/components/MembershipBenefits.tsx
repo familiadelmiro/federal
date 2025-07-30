@@ -9,11 +9,11 @@ const MembershipBenefits = () => {
     },
     {
       image: "https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-30_17-56-12.jpg",
-      description: "Atendimento com valores reduzidos em clínicas médicas e laboratórios parceiros."
+      description: "Ingresso gratuito na rede Cinesystem todo mês para nossos associados."
     },
     {
       image: "https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-30_17-55-57.jpg",
-      description: "Ingresso gratuito na rede Cinesystem todo mês para nossos associados."
+      description: "Atendimento com valores reduzidos em clínicas médicas e laboratórios parceiros."
     },
     {
       image: "https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-30_17-56-01.jpg",
@@ -30,7 +30,7 @@ const MembershipBenefits = () => {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-gray-50 overflow-hidden">
+    <section className="py-8 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">Clube de Benefícios Exclusivos</h2>
