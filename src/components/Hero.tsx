@@ -302,6 +302,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
         {/* Imagem no topo */}
+        {/* Título movido para cima da imagem */}
+        <div className="text-center mb-4">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
+            Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
+          </h1>
+        </div>
+
         <div className="w-full max-w-3xl mx-auto -mb-2 relative">
           <img
             src="https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-19_10-29-51.jpg"
@@ -311,12 +318,28 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           />
           
         </div>
-        
-        {/* Título */}
-        <div className="text-center mb-0 md:mb-1">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
-            Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
-          </h1>
+
+        {/* Nova seção entre imagem e vídeo */}
+        <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-gray-900">
+            O Problema que Afeta 86% dos Brasileiros
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
+              Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
+              "acabar" no meio do mês. Segundo pesquisas recentes, <span className="text-red-600 font-bold">86% dos brasileiros afirmam que sua internet não 
+              dura o mês todo</span>. Isso não é coincidência - é um problema sistêmico que as operadoras tradicionais criaram 
+              para lucrar mais.
+            </p>
+            <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
+              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-blue-600 font-bold">100.000 pessoas 
+              no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço 
+              justo?
+            </p>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mt-6 md:mt-8">
+              Veja Como Funciona na Prática
+            </h3>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
