@@ -208,11 +208,8 @@ const Testimonials = () => {
         {/* Carrossel de Depoimentos do Grupo WhatsApp */}
         <div className="mt-8 md:mt-16">
           <div className="text-center mb-6 md:mb-8">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
-              Nosso Grupo Exclusivo no WhatsApp
-            </h3>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-              Quando você se torna associado, ingressa no nosso grupo da empresa onde troca experiências com outros associados e recebe suporte 24h por dia. Veja alguns depoimentos reais:
+              Quando você se torna um associado, você pode ingressa em nosso grupo da empresa onde os associados troca experiências com outros associados e recebe suporte 24h por dia. Veja alguns depoimentos la de nosso grupo:
             </p>
           </div>
 
@@ -278,7 +275,7 @@ const Testimonials = () => {
                 <h4 className="text-lg md:text-xl font-bold text-gray-900">Grupo Exclusivo de Associados</h4>
               </div>
               <p className="text-sm md:text-base text-gray-700">
-                Faça parte da nossa comunidade no WhatsApp com mais de 100.000 associados ativos, compartilhando experiências e recebendo suporte 24h por dia!
+                Comunidade ativa 24h por dia!
               </p>
             </div>
           </div>
