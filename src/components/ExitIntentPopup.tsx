@@ -154,7 +154,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onRedirect }) => {
               <div className="space-y-3">
                 <button
                   onClick={handleStay}
-                  className="w-full bg-gradient-to-r from-green-500 via-green-600 to-green-500 hover:from-green-600 hover:via-green-700 hover:to-green-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-glow-green relative overflow-hidden"
+                  className="w-full bg-gradient-to-r from-accent via-accent-dark to-accent hover:from-accent-dark hover:via-accent hover:to-accent-dark text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-glow-green relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
                   <span className="relative z-10">🎯 SIM! QUERO GARANTIR MINHA OFERTA AGORA</span>
