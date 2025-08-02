@@ -6,14 +6,24 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0a1f44',
-          light: '#1a2f54',
-          dark: '#000f34',
+          DEFAULT: '#1e40af', // Azul Royal
+          light: '#3b82f6',   // Azul mais claro
+          dark: '#1e3a8a',    // Azul mais escuro
         },
         accent: {
-          DEFAULT: '#ff6b35',
-          light: '#ff8b55',
-          dark: '#df4b15',
+          DEFAULT: '#22c55e', // Verde para CTAs
+          light: '#4ade80',   // Verde claro
+          dark: '#16a34a',    // Verde escuro
+        },
+        warning: {
+          DEFAULT: '#eab308', // Amarelo para ofertas
+          light: '#facc15',
+          dark: '#ca8a04',
+        },
+        danger: {
+          DEFAULT: '#ef4444', // Vermelho para urgência
+          light: '#f87171',
+          dark: '#dc2626',
         },
         light: '#f5f5f5',
       },
