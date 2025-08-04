@@ -1,58 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Wifi } from 'lucide-react';
+import React, { useState } from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Benefits from './components/Benefits';
+import Plans from './components/Plans';
+import HowItWorks from './components/HowItWorks';
+import MembershipBenefits from './components/MembershipBenefits';
+import Differentials from './components/Differentials';
+import Testimonials from './components/Testimonials';
+import WrittenTestimonials from './components/WrittenTestimonials';
+import ObjectionsSection from './components/ObjectionsSection';
+import About from './components/About';
+import TrustSection from './components/TrustSection';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
+import ExitIntentPopup from './components/ExitIntentPopup';
+import WhatsAppButton from './components/WhatsAppButton';
+import CadastroModal from './components/CadastroModal';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+function App() {
+  const [isCadastroModalOpen, setIsCadastroModalOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleDirectRedirect = () => {
+    setIsCadastroModalOpen(true);
+  };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary-dark shadow-md py-2' : 'bg-primary-dark/90 backdrop-blur-sm py-4'}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <Wifi className="h-8 w-8 text-white mr-2" />
-          <span className="text-xl font-bold text-white">Federal Associados</span>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          <a href="#beneficios" className="text-gray-200 hover:text-white transition-colors">Benefícios</a>
-          <a href="#planos" className="text-gray-200 hover:text-white transition-colors">Planos</a>
-          <a href="https://federalassociados.com.br/login" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white transition-colors">Login</a>
-          <a href="https://federalassociados.com.br/boletos" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white transition-colors">Fatura</a>
-          <a href="#sobre" className="text-gray-200 hover:text-white transition-colors">Sobre Nós</a>
-          <a href="#faq" className="text-gray-200 hover:text-white transition-colors">FAQ</a>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-2">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
+    <ThemeProvider>
+      <div className="font-sans text-gray-800 overflow-x-hidden bg-white min-h-screen">
+        <Navbar />
+        <Hero onRedirect={handleDirectRedirect} />
+        <Testimonials />
+        <Benefits />
+        <Differentials />
+        <Plans onRedirect={handleDirectRedirect} />
+        <WrittenTestimonials />
+        <MembershipBenefits />
+        <ObjectionsSection onRedirect={handleDirectRedirect} />
+        <About />
+        <TrustSection />
+        <FAQ />
+        <Footer />
+        
+        {/* Exit Intent Popup */}
+        <ExitIntentPopup onRedirect={handleDirectRedirect} />
+        
+        {/* WhatsApp Button */}
+        <WhatsAppButton />
+        
+        {/* Cadastro Modal */}
+        <CadastroModal 
+          isOpen={isCadastroModalOpen} 
+          onClose={() => setIsCadastroModalOpen(false)} 
+        />
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-primary-dark shadow-lg border-t border-white/20">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="#planos" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-white transition-colors py-2">Planos</a>
-            <a href="https://federalassociados.com.br/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-white transition-colors py-2">Login</a>
-            <a href="https://federalassociados.com.br/boletos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-white transition-colors py-2">Fatura</a>
-            <a href="#sobre" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-white transition-colors py-2">Sobre Nós</a>
-            <a href="#faq" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-white transition-colors py-2">FAQ</a>
-          </div>
-        </div>
-      )}
-    </nav>
+    </ThemeProvider>
   );
-};
+}
 
-export default Navbar;
+export default App;
