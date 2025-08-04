@@ -298,14 +298,14 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white text-gray-900 pt-16"
+      className="relative bg-primary-dark text-white pt-16"
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
         {/* Imagem no topo */}
         {/* Título movido para cima da imagem */}
         <div className="text-center mb-4">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
-            Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-white">
+            Sua internet não dura o mês todo? <span className="text-red-400 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
         </div>
 
@@ -321,22 +321,22 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Nova seção entre imagem e vídeo */}
         <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">
             O Problema que Afeta 86% dos Brasileiros
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-200 mb-4 leading-relaxed">
               Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
-              "acabar" no meio do mês. Segundo pesquisas recentes, <span className="text-red-600 font-bold">86% dos brasileiros afirmam que sua internet não 
+              "acabar" no meio do mês. Segundo pesquisas recentes, <span className="text-red-400 font-bold">86% dos brasileiros afirmam que sua internet não 
               dura o mês todo</span>. Isso não é coincidência - é um problema sistêmico que as operadoras tradicionais criaram 
               para lucrar mais.
             </p>
-            <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-blue-600 font-bold">100.000 pessoas 
+            <p className="text-base md:text-lg text-gray-200 mb-4 leading-relaxed">
+              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-blue-400 font-bold">100.000 pessoas 
               no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço 
               justo?
             </p>
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mt-6 md:mt-8">
+            <h3 className="text-xl md:text-2xl font-bold text-white mt-6 md:mt-8">
               Veja Como Funciona na Prática
             </h3>
           </div>
@@ -347,7 +347,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             {/* VÍDEO MOBILE - SEMPRE CLICÁVEL */}
             <div className="md:hidden mb-4 relative">
               {showVideo && !videoError && (
-                <div className="relative p-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-2xl shadow-2xl" style={{ maxWidth: '800px', margin: '10px auto' }}>
+                <div className="relative p-1 bg-gradient-to-r from-primary via-primary-light to-primary rounded-2xl shadow-2xl" style={{ maxWidth: '800px', margin: '10px auto' }}>
                   <video 
                     ref={videoRefMobile}
                     autoPlay 
@@ -380,7 +380,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     <p className="text-sm md:text-base">Clique aqui</p>
                   </div>
                   
-                  <div className="bg-blue-600 rounded-xl p-4 mb-6 border-2 border-white/30">
+                  <div className="bg-primary rounded-xl p-4 mb-6 border-2 border-white/30">
                     <Volume2 className="h-8 w-8 text-white" />
                   </div>
                   
@@ -415,7 +415,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               {(videoError || !showVideo) && (
                 <div className="relative">
                   <div 
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 md:p-8 text-white text-center"
+                    className="bg-gradient-to-r from-primary to-primary-light rounded-xl p-6 md:p-8 text-white text-center"
                     style={{
                       width: '100%', 
                       maxWidth: '800px', 
@@ -427,7 +427,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     <p className="text-base md:text-lg mb-4">Conheça a Federal Associados e descubra como milhares de brasileiros estão economizando com internet ilimitada!</p>
                     <button
                       onClick={handleDirectRedirect}
-                      className="bg-white text-blue-600 font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                      className="bg-white text-primary font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                     >
                       Ver Mais Detalhes
                     </button>
@@ -437,7 +437,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             </div>
 
             {/* SUBTÍTULO ABAIXO DO VÍDEO */}
-            <p className="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed text-center md:text-left">
+            <p className="text-lg md:text-xl mb-4 text-gray-200 leading-relaxed text-center md:text-left">
               {typedText}
             </p>
             
@@ -454,7 +454,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             {/* VÍDEO - DESKTOP COM REF SEPARADA */}
             <div className="mb-4 relative">
               {showVideo && !videoError && (
-                <div className="relative p-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-2xl shadow-2xl">
+                <div className="relative p-1 bg-gradient-to-r from-primary via-primary-light to-primary rounded-2xl shadow-2xl">
                   <video 
                     ref={videoRefDesktop}
                     autoPlay 
@@ -482,7 +482,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     <p className="text-base">Clique aqui</p>
                   </div>
                   
-                  <div className="bg-blue-600 rounded-xl p-4 mb-6 border-2 border-white/30">
+                  <div className="bg-primary rounded-xl p-4 mb-6 border-2 border-white/30">
                     <Volume2 className="h-8 w-8 text-white" />
                   </div>
                   
@@ -520,12 +520,12 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
               {/* Fallback quando vídeo não carrega - DESKTOP */}
               {(videoError || !showVideo) && (
-                <div className="bg-gradient-to-r from-blue-700 to-purple-700 rounded-2xl p-8 text-white text-center border border-blue-500/30">
+                <div className="bg-gradient-to-r from-primary-dark to-primary rounded-2xl p-8 text-white text-center border border-primary/30">
                   <h3 className="text-2xl font-bold mb-4">🎥 Vídeo de Apresentação</h3>
                   <p className="text-lg mb-4">Conheça a Federal Associados e descubra como milhares de brasileiros estão economizando com internet ilimitada!</p>
                   <button
                     onClick={onRedirect}
-                    className="bg-white text-blue-600 font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="bg-white text-primary font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Ver Mais Detalhes
                   </button>
@@ -534,8 +534,8 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             </div>
 
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
-            <div className="bg-gray-100 rounded-xl p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-gray-300">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/20">
+              <h3 className="text-xl font-bold mb-4 text-white">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -543,7 +543,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Internet ilimitada 4G/5G</span>
+                  <span className="text-gray-200">Internet ilimitada 4G/5G</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -551,7 +551,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Ligações ilimitadas para todo o Brasil</span>
+                  <span className="text-gray-200">Ligações ilimitadas para todo o Brasil</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -559,7 +559,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Cadastro sem consulta ao SPC/SERASA</span>
+                  <span className="text-gray-200">Cadastro sem consulta ao SPC/SERASA</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -567,7 +567,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Sem fidelidade</span>
+                  <span className="text-gray-200">Sem fidelidade</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -575,7 +575,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Navegação o mês inteiro, sem surpresas</span>
+                  <span className="text-gray-200">Navegação o mês inteiro, sem surpresas</span>
                 </li>
               </ul>
             </div>
